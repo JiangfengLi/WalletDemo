@@ -1,5 +1,7 @@
 package com.edu.walletdemo
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun handleResult(result: QRResult) {
+    private fun handleResult(result: QRResult) {
         val text = when (result) {
             is QRResult.QRSuccess -> result.content.rawValue
             QRResult.QRUserCanceled -> "User canceled"
@@ -31,5 +33,12 @@ class MainActivity : AppCompatActivity() {
             is QRResult.QRError -> "${result.exception.javaClass.simpleName}: ${result.exception.localizedMessage}"
         }
         tvresult!!.text = text
+        redirection(text)
+    }
+
+    private fun redirection (text : String) {
+        val openURL = Intent(Intent.ACTION_VIEW)
+        openURL.data = Uri.parse(text)
+        startActivity(openURL)
     }
 }
