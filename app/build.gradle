@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.edu.walletdemo"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -38,4 +38,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'me.dm7.barcodescanner:zxing:1.9.13' // CodeScanner
+    implementation("io.github.g00fy2.quickie:quickie-bundled:1.2.4")
 }

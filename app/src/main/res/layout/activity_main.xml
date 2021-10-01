@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn"
-        android:text="Scan Barcode or QR code" />
+        android:text="Scan QR code to Connect DAPP" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
