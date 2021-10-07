@@ -1,3 +1,0 @@
-[submodule "app/libs/walletlink-mobile-sdk"]
-	path = app/libs/walletlink-mobile-sdk
-	url = https://github.com/walletlink/walletlink-mobile-sdk.git
