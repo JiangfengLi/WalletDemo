@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.edu.walletdemo"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -39,4 +39,37 @@ dependencies {
 
     implementation 'me.dm7.barcodescanner:zxing:1.9.13' // CodeScanner
     implementation("io.github.g00fy2.quickie:quickie-bundled:1.2.4")
+
+
+    implementation project(':walletlink')
+    implementation project(':libraries:core')
+    implementation project(':libraries:stores')
+    implementation project(':libraries:crypto')
+    implementation project(':libraries:http')
+    implementation project(':libraries:databases')
+
+//
+//    // Kotlin
+////    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:")
+//
+//    // Logging
+//    implementation("com.jakewharton.timber:timber:")
+//
+//    // ReactiveX 2
+//    implementation("io.reactivex.rxjava2:rxjava:")
+    implementation("io.reactivex.rxjava2:rxkotlin:")
+    implementation('io.reactivex.rxjava2:rxandroid:')
+//
+//    // Retrofit - Type-safe HTTP client for Android and Java
+//    implementation("com.squareup.retrofit2:retrofit:")
+//
+//    // Room
+//    implementation("androidx.room:room-rxjava2:")
+//    implementation ("androidx.room:room-runtime:2.3.0")
+//    // Moshi
+//    implementation("com.squareup.moshi:moshi:")
+//
+//    // Coroutine
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:")
+
 }
